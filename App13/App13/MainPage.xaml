@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App13.MainPage">
+
+    <Grid RowDefinitions="*, auto" x:Name="grid">
+        <ListView ItemsSource="{Binding MessageList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid RowDefinitions ="auto, auto">
+                            <Frame BackgroundColor="Gray"
+                             Padding="10"
+                             HasShadow="True"
+                             Margin="10,10,80,10">
+                                <Label Text="{Binding Text}"/>
+                            </Frame>
+                            <Label Text="{Binding UserName}"/>
+                            <Label Text="{Binding Message}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <StackLayout x:Name="stack_layout" Grid.Row ="1" Padding ="10,0,10,0" VerticalOptions="StartAndExpand" Margin="0,0,0,120" HorizontalOptions="EndAndExpand" 
+                     WidthRequest="350">
+            </StackLayout>
+            <StackLayout Grid.Row ="1" Padding ="10" VerticalOptions="EndAndExpand">
+            <Entry x:Name="Message_Enty">    
+            </Entry>
+            <Button Text= "Отправить"
+                    BackgroundColor="#ADB9FA"
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
