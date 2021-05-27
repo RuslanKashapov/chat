@@ -23,16 +23,21 @@
             </ListView.ItemTemplate>
         </ListView>
         
-        <StackLayout x:Name="stack_layout" Grid.Row ="1" Padding ="10,0,10,0" VerticalOptions="StartAndExpand" Margin="0,0,0,120" HorizontalOptions="EndAndExpand" 
+            <StackLayout x:Name="stack_layout" Grid.Row ="1" Padding ="10,0,10,0" VerticalOptions="StartAndExpand" Margin="0,0,0,0" HorizontalOptions="EndAndExpand" 
                      WidthRequest="350">
             </StackLayout>
+        
+        
             <StackLayout Grid.Row ="1" Padding ="10" VerticalOptions="EndAndExpand">
-            <Entry x:Name="Message_Enty">    
-            </Entry>
-            <Button Text= "Отправить"
-                    BackgroundColor="#ADB9FA"
+            <Frame Padding="0">
+                <Entry x:Name="Message_Enty" BackgroundColor="#E9CAFF" Placeholder ="Введите сообщение">
+                </Entry>
+            </Frame>
+        <Button Text= "Отправить"
+                    BackgroundColor="#E9CAFF"
                     Clicked="Button_Clicked"/>
         </StackLayout>
+
     </Grid>
 
 </ContentPage>
